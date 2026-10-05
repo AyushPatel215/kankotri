@@ -1,8 +1,8 @@
 import { memo, useEffect, useRef } from 'react';
 
 const COLORS = ['#C97C7F', '#E2A9A3', '#D4AF6A', '#B08440', '#A8605E', '#F1C9C3', '#FFFFFF'];
-const DURATION = 5200;
-const FADE_FROM = 4200;
+const DURATION = 7500;
+const FADE_FROM = 5800;
 
 type Kind = 'petal' | 'flower' | 'ribbon';
 interface Particle {
@@ -51,7 +51,7 @@ export const Celebration = memo(function Celebration() {
           vx: Math.cos(a) * s,
           vy: Math.sin(a) * s,
           rot: Math.random() * Math.PI * 2,
-          vr: (Math.random() - 0.5) * 0.25,
+          vr: (Math.random() - 0.5) * 0.12,
           size: 4 + Math.random() * 5,
           color: COLORS[Math.floor(Math.random() * COLORS.length)],
           kind: r < 0.45 ? 'petal' : r < 0.75 ? 'ribbon' : 'flower',
@@ -61,10 +61,10 @@ export const Celebration = memo(function Celebration() {
       }
     };
 
-    const popper = Math.min(H * 0.022, 19);
+    const popper = Math.min(H * 0.018, 15.5);
     shoot(0, H, -Math.PI / 3, 0.7, 40, popper);
     shoot(W, H, (-2 * Math.PI) / 3, 0.7, 40, popper);
-    shoot(W / 2, H * 0.42, -Math.PI / 2, Math.PI * 2, 30, 8);
+    shoot(W / 2, H * 0.42, -Math.PI / 2, Math.PI * 2, 30, 6.5);
 
     let raf = 0;
     const start = performance.now();
@@ -76,10 +76,10 @@ export const Celebration = memo(function Celebration() {
 
       for (const p of particles) {
         p.vx *= 0.985;
-        p.vy = p.vy * 0.985 + 0.2;
-        const terminal = p.kind === 'ribbon' ? 3 : 2.1;
+        p.vy = p.vy * 0.985 + 0.13;
+        const terminal = p.kind === 'ribbon' ? 1.9 : 1.3;
         if (p.vy > terminal) p.vy = terminal;
-        p.x += p.vx + Math.sin(p.phase + t / 320) * 0.7;
+        p.x += p.vx + Math.sin(p.phase + t / 520) * 0.6;
         p.y += p.vy;
         p.rot += p.vr;
 
@@ -109,7 +109,7 @@ export const Celebration = memo(function Celebration() {
           ctx.lineCap = 'round';
           ctx.beginPath();
           for (let i = 0; i <= p.len; i += 2) {
-            const y = Math.sin(i / 3 + p.phase + t / 110) * 3.2;
+            const y = Math.sin(i / 3 + p.phase + t / 180) * 3.2;
             if (i === 0) ctx.moveTo(-p.len / 2, y);
             else ctx.lineTo(i - p.len / 2, y);
           }

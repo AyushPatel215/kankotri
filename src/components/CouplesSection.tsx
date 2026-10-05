@@ -6,19 +6,19 @@ import { useReveal } from '@/hooks/useReveal';
 
 function CoupleArch({ couple, index }: { couple: (typeof COUPLES)[number]; index: number }) {
   const { ref, visible } = useReveal<HTMLDivElement>();
-  const delay = (ms: number) => ({ transitionDelay: `${ms + index * 150}ms` });
+  const delay = (ms: number) => ({ transitionDelay: `${ms + index * 250}ms` });
 
   return (
     <div ref={ref} className={`relative w-full max-w-[340px] mx-auto ${visible ? 'is-visible' : ''}`}>
       <ArchFrame className="absolute inset-0 w-full h-full" />
       {/* finial */}
       <span
-        className={`absolute left-1/2 -top-2 -ml-2 w-4 h-4 rotate-45 border border-gold bg-sand transition-all duration-700 ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`}
-        style={delay(900)}
+        className={`absolute left-1/2 -top-2 -ml-2 w-4 h-4 rotate-45 border border-gold bg-sand transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`}
+        style={delay(1250)}
       />
 
       <div className="relative px-8 pt-20 pb-10 flex flex-col items-center text-center">
-        <div className={`rise-block ${visible ? 'is-visible' : ''}`} style={delay(300)}>
+        <div className={`rise-block ${visible ? 'is-visible' : ''}`} style={delay(400)}>
           <p className="font-gu text-bronze/80 text-base">ચિ.</p>
           <p className="gold-text font-gu font-bold leading-tight" style={{ fontSize: 'clamp(2.1rem, 10vw, 2.6rem)' }}>
             {couple.groomGu}
@@ -27,8 +27,8 @@ function CoupleArch({ couple, index }: { couple: (typeof COUPLES)[number]; index
         </div>
 
         <div
-          className={`my-4 flex items-center gap-3 transition-all duration-700 ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`}
-          style={delay(600)}
+          className={`my-4 flex items-center gap-3 transition-all duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`}
+          style={delay(850)}
           aria-hidden="true"
         >
           <span className="h-px w-10 bg-gradient-to-r from-transparent to-gold/70" />
@@ -36,7 +36,7 @@ function CoupleArch({ couple, index }: { couple: (typeof COUPLES)[number]; index
           <span className="h-px w-10 bg-gradient-to-l from-transparent to-gold/70" />
         </div>
 
-        <div className={`rise-block ${visible ? 'is-visible' : ''}`} style={delay(750)}>
+        <div className={`rise-block ${visible ? 'is-visible' : ''}`} style={delay(1050)}>
           <p className="font-gu text-bronze/80 text-base">ચિ. સૌ. કાં.</p>
           <p className="gold-text font-gu font-bold leading-tight" style={{ fontSize: 'clamp(2.1rem, 10vw, 2.6rem)' }}>
             {couple.brideGu}
@@ -46,7 +46,7 @@ function CoupleArch({ couple, index }: { couple: (typeof COUPLES)[number]; index
 
         <p
           className={`rise-block mt-6 font-script text-blush-600 leading-none ${visible ? 'is-visible' : ''}`}
-          style={{ ...delay(1000), fontSize: 'clamp(2rem, 9vw, 2.4rem)' }}
+          style={{ ...delay(1400), fontSize: 'clamp(2rem, 9vw, 2.4rem)' }}
         >
           {couple.groom} &amp; {couple.bride}
         </p>

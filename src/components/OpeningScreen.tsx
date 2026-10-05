@@ -40,28 +40,28 @@ export const OpeningScreen = memo(function OpeningScreen({
           background: 'radial-gradient(ellipse 70% 55% at 50% 50%, rgba(251,243,234,0.9), rgba(251,243,234,0.35) 70%, transparent)',
         }}
       >
-        <div className="cover-in" style={d(100)}>
+        <div className="cover-in" style={d(150)}>
           <Ganesh size={74} className="mx-auto" />
         </div>
 
-        <p className="cover-in mt-2 font-gu font-semibold text-bronze text-[1.05rem]" style={d(250)}>
+        <p className="cover-in mt-2 font-gu font-semibold text-bronze text-[1.05rem]" style={d(350)}>
           શ્રી ગણેશાય નમઃ
         </p>
 
         <h1
           className="cover-in gold-text shimmer font-gu font-bold leading-tight mt-2"
-          style={{ ...d(400), fontSize: 'clamp(2.8rem, 14vw, 4.4rem)' }}
+          style={{ ...d(550), fontSize: 'clamp(2.8rem, 14vw, 4.4rem)' }}
         >
           શુભ વિવાહ
         </h1>
 
-        <div className="cover-in" style={d(550)}>
+        <div className="cover-in" style={d(750)}>
           <Ornament />
         </div>
 
         <div
           className="cover-in mt-4 flex flex-col items-center font-script text-cocoa leading-none"
-          style={{ ...d(700), fontSize: 'clamp(2.2rem, 10.5vw, 3rem)' }}
+          style={{ ...d(1000), fontSize: 'clamp(2.2rem, 10.5vw, 3rem)' }}
         >
           <span className="flex items-center gap-3 py-1">
             Kishan <Heart size={18} /> Riya
@@ -72,7 +72,7 @@ export const OpeningScreen = memo(function OpeningScreen({
           </span>
         </div>
 
-        <div className="cover-in mt-9" style={d(900)}>
+        <div className="cover-in mt-9" style={d(1250)}>
           <button
             type="button"
             onClick={onOpen}

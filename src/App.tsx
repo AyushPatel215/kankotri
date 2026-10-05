@@ -17,7 +17,7 @@ import { WEDDING_DATE } from '@/data/wedding';
  * closed   → doors shut, waiting for "કંકોત્રી ખોલો"
  * opening  → doors swinging open over the scratch card
  * scratch  → scratch the gold foil; on reveal flowers and ribbons burst
- * entering → ~1.8s later the scratch screen fades out by itself, hero words rise
+ * entering → ~2s later the scratch screen fades out by itself, hero words rise
  * open     → free scrolling
  */
 type Phase = 'closed' | 'opening' | 'scratch' | 'entering' | 'open';
@@ -36,7 +36,7 @@ function App() {
     window.scrollTo(0, 0);
     setPhase('opening');
     play(); // inside the tap, so mobile browsers allow audio
-    setTimeout(() => setPhase('scratch'), prefersReduced() ? 350 : 1400);
+    setTimeout(() => setPhase('scratch'), prefersReduced() ? 350 : 2300);
   }, [play]);
 
   const [celebrating, setCelebrating] = useState(false);
@@ -44,11 +44,11 @@ function App() {
   // After the foil is scratched: burst, then move on automatically
   const handleReveal = useCallback(() => {
     setCelebrating(true);
-    setTimeout(() => setCelebrating(false), 6000);
+    setTimeout(() => setCelebrating(false), 8500);
     setTimeout(() => {
       setPhase('entering');
-      setTimeout(() => setPhase('open'), 750);
-    }, 1800);
+      setTimeout(() => setPhase('open'), 1200);
+    }, 2000);
   }, []);
 
   // Lock scroll until the invitation is fully open

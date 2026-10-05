@@ -20,8 +20,8 @@ export const PetalEffect = memo(function PetalEffect({ active }: { active: boole
       id: i,
       left: Math.random() * 100,
       size: 9 + Math.random() * 7,
-      duration: 9 + Math.random() * 7,
-      delay: -Math.random() * 12,
+      duration: 14 + Math.random() * 8,
+      delay: -Math.random() * 18,
       drift: (Math.random() - 0.5) * 140,
       color: COLORS[i % COLORS.length],
     }))
