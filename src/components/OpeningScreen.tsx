@@ -44,7 +44,10 @@ export const OpeningScreen = memo(function OpeningScreen({
           <Ganesh size={74} className="mx-auto" />
         </div>
 
-        <p className="cover-in mt-2 font-gu font-semibold text-bronze text-[1.05rem]" style={d(350)}>
+        <p
+          className="cover-in mt-3 font-gu font-bold text-bronze leading-tight"
+          style={{ ...d(350), fontSize: 'clamp(1.7rem, 8vw, 2.4rem)' }}
+        >
           શ્રી ગણેશાય નમઃ
         </p>
 
@@ -68,7 +71,7 @@ export const OpeningScreen = memo(function OpeningScreen({
           </span>
           <span className="font-serif italic text-bronze text-xl my-1">&amp;</span>
           <span className="flex items-center gap-3 py-1">
-            Hina <Heart size={18} /> Parth
+            Heena <Heart size={18} /> Parth
           </span>
         </div>
 

@@ -24,15 +24,16 @@ export const COUPLES = [
     groomGu: 'કિશન',
     brideGu: 'રિયા',
     groomParentsGu: 'શ્રી કીર્તિભાઈ અને શ્રીમતિ જ્યોત્સનાબેન',
-    brideParentsGu: 'શ્રી બડદેવલાલ અને શ્રીમતિ વર્ષાબેન',
+    brideParentsGu: 'શ્રી બળદેવલાલ અને શ્રીમતિ વર્ષાબેન',
   },
   {
     groom: 'Parth',
-    bride: 'Hina',
+    bride: 'Heena',
     groomGu: 'પાર્થ',
     brideGu: 'હિના',
     groomParentsGu: 'શ્રી રાજેન્દ્રલાલ અને શ્રીમતિ રમિલાબેન',
     brideParentsGu: 'શ્રી કીર્તિભાઈ અને શ્રીમતિ જ્યોત્સનાબેન',
+    brideFirst: true,
   },
 ];
 
@@ -43,11 +44,11 @@ export const SCHEDULE: DaySchedule[] = [
     weekday: 'Wednesday',
     weekdayGu: 'બુધવાર',
     events: [
-      { name: 'ગણેશ સ્થાપના', nameEn: 'Ganesh Sthapana', date: '25 Nov', time: '08:00 AM' },
-      { name: 'ગ્રહ શાંતિ', nameEn: 'Grah Shanti', date: '25 Nov', time: '09:30 AM' },
-      { name: 'જમણવાર', nameEn: 'Jamanvar (Lunch)', date: '25 Nov', time: '12:00 PM' },
-      { name: 'મામેરું', nameEn: 'Mameru', date: '25 Nov', time: '04:00 PM' },
-      { name: 'હળદી', nameEn: 'Haldi Ceremony', date: '25 Nov', time: '06:00 PM' },
+      { name: 'ગણેશ સ્થાપના', nameEn: 'Ganesh Sthapana', date: '25 Nov', time: '07:15 AM' },
+      // { name: 'ગ્રહ શાંતિ', nameEn: 'Grah Shanti', date: '25 Nov', time: '09:30 AM' },
+      // { name: 'જમણવાર', nameEn: 'Jamanvar (Lunch)', date: '25 Nov', time: '12:00 PM' },
+      { name: 'મામેરું', nameEn: 'Mameru', date: '25 Nov', time: '02:00 PM' },
+      { name: 'હલ્દી રસમ તથા રાસગરબા', nameEn: 'Haldi Ceremony', date: '25 Nov', time: '08:00 PM' },
     ],
   },
   {
@@ -56,8 +57,8 @@ export const SCHEDULE: DaySchedule[] = [
     weekday: 'Thursday',
     weekdayGu: 'ગુરુવાર',
     events: [
-      { name: 'જાન પ્રસ્થાન', nameEn: "Jan Prasthan", date: '26 Nov', time: '04:00 PM' },
-      { name: 'હસ્ત મેળાપ', nameEn: 'Hasta Melap', date: '26 Nov', time: '07:00 PM' },
+      { name: 'જાન પ્રસ્થાન', nameEn: "Jan Prasthan", date: '26 Nov', time: '07:30 AM' },
+      { name: 'હસ્ત મેળાપ', nameEn: 'Hasta Melap', date: '26 Nov', time: '11:00 AM' },
     ],
   },
   {
@@ -66,9 +67,9 @@ export const SCHEDULE: DaySchedule[] = [
     weekday: 'Saturday',
     weekdayGu: 'શનિવાર',
     events: [
-      { name: 'જાન આગમન', nameEn: "Jan Aagaman(Baraat)", date: '28 Nov', time: '10:00 AM' },
-      { name: 'હસ્ત મેળાપ', nameEn: 'Hasta Melap', date: '28 Nov', time: '11:00 AM' },
-      { name: 'જમણવાર', nameEn: 'Jamanvar (Lunch)', date: '28 Nov', time: '01:00 PM' },
+      { name: 'જાન આગમન', nameEn: "Jan Aagaman (Baraat)", date: '28 Nov', time: '08:00 AM' },
+      { name: 'હસ્ત મેળાપ', nameEn: 'Hasta Melap', date: '28 Nov', time: '09:30 AM' },
+      { name: 'ભોજન સમારંભ', nameEn: 'Banquet (Lunch)', date: '28 Nov', time: '10:30 AM' },
       { name: 'કન્યા વિદાય', nameEn: 'Kanya Viday', date: '28 Nov', time: '04:00 PM' },
     ],
   },

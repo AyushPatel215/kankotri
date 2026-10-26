@@ -5,7 +5,7 @@ import { SectionTitle } from './SectionTitle';
 import { Rise, RiseText } from './RiseText';
 
 // Leuva Patidar Vadi, Palej, Mehsana, Gujarat
-const VENUE_MAP_URL = 'https://maps.app.goo.gl/C1A5X4LdjAPencyZ6?g_st=aw';
+const VENUE_MAP_URL = 'https://goo.gl/maps/B9JnLerhrqN3fmDd6?g_st=aw';
 
 export const FinalSection = memo(function FinalSection() {
   return (
@@ -30,7 +30,7 @@ export const FinalSection = memo(function FinalSection() {
             <CalendarHeart className="mx-auto w-7 h-7 text-bronze" strokeWidth={1.5} aria-hidden="true" />
             <p className="mt-3 font-gu text-cocoa/75 text-base">હસ્ત મેળાપ</p>
             <p className="gold-text font-gu font-bold text-[1.7rem] leading-tight mt-1">શનિવાર, ૨૮ નવેમ્બર ૨૦૨૬</p>
-            <p className="font-gu font-semibold text-cocoa text-lg mt-1">સવારે ૧૧:૦૦ કલાકે</p>
+            <p className="font-gu font-semibold text-cocoa text-lg mt-1">સવારે ૯:૩૦ કલાકે</p>
 
             <Ornament className="mx-auto my-6" />
 
@@ -39,7 +39,7 @@ export const FinalSection = memo(function FinalSection() {
             <p className="font-gu font-bold text-cocoa text-xl text-gu mt-1">
               લેઉવા પાટીદાર વાડી,
               <br />
-              પાલેજ, મહેસાણા
+              પાલજ, મહેસાણા
             </p>
             <p className="font-serif italic text-bronze text-base mt-1">Leuva Patidar Vadi, Palej, Mehsana</p>
             <a
@@ -64,7 +64,7 @@ export const FinalSection = memo(function FinalSection() {
               Kishan <Heart size={16} /> Riya
             </p>
             <p className="font-script text-cocoa leading-tight flex flex-wrap items-center justify-center gap-x-2" style={{ fontSize: 'clamp(1.8rem, 8vw, 2.3rem)' }}>
-              Hina <Heart size={16} /> Parth
+              Heena <Heart size={16} /> Parth
             </p>
           </Rise>
         </div>

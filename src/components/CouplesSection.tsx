@@ -8,6 +8,12 @@ function CoupleArch({ couple, index }: { couple: (typeof COUPLES)[number]; index
   const { ref, visible } = useReveal<HTMLDivElement>();
   const delay = (ms: number) => ({ transitionDelay: `${ms + index * 250}ms` });
 
+  const groom = { name: couple.groomGu, relation: 'સુપુત્ર', parents: couple.groomParentsGu };
+  const bride = { name: couple.brideGu, relation: 'સુપુત્રી', parents: couple.brideParentsGu };
+  const brideFirst = 'brideFirst' in couple && couple.brideFirst;
+  const [first, second] = brideFirst ? [bride, groom] : [groom, bride];
+  const [firstEn, secondEn] = brideFirst ? [couple.bride, couple.groom] : [couple.groom, couple.bride];
+
   return (
     <div ref={ref} className={`relative w-full max-w-[340px] mx-auto ${visible ? 'is-visible' : ''}`}>
       <ArchFrame className="absolute inset-0 w-full h-full" />
@@ -21,9 +27,9 @@ function CoupleArch({ couple, index }: { couple: (typeof COUPLES)[number]; index
         <div className={`rise-block ${visible ? 'is-visible' : ''}`} style={delay(400)}>
           <p className="font-gu text-bronze/80 text-base">ચિ.</p>
           <p className="gold-text font-gu font-bold leading-tight" style={{ fontSize: 'clamp(2.1rem, 10vw, 2.6rem)' }}>
-            {couple.groomGu}
+            {first.name}
           </p>
-          <p className="font-gu text-cocoa/75 text-[0.95rem] text-gu mt-1">સુપુત્ર {couple.groomParentsGu}</p>
+          <p className="font-gu text-cocoa/75 text-[0.95rem] text-gu mt-1">{first.relation} {first.parents}</p>
         </div>
 
         <div
@@ -37,18 +43,18 @@ function CoupleArch({ couple, index }: { couple: (typeof COUPLES)[number]; index
         </div>
 
         <div className={`rise-block ${visible ? 'is-visible' : ''}`} style={delay(1050)}>
-          <p className="font-gu text-bronze/80 text-base">ચિ. સૌ. કાં.</p>
+          <p className="font-gu text-bronze/80 text-base">ચિ.</p>
           <p className="gold-text font-gu font-bold leading-tight" style={{ fontSize: 'clamp(2.1rem, 10vw, 2.6rem)' }}>
-            {couple.brideGu}
+            {second.name}
           </p>
-          <p className="font-gu text-cocoa/75 text-[0.95rem] text-gu mt-1">સુપુત્રી {couple.brideParentsGu}</p>
+          <p className="font-gu text-cocoa/75 text-[0.95rem] text-gu mt-1">{second.relation} {second.parents}</p>
         </div>
 
         <p
           className={`rise-block mt-6 font-script text-blush-600 leading-none ${visible ? 'is-visible' : ''}`}
           style={{ ...delay(1400), fontSize: 'clamp(2rem, 9vw, 2.4rem)' }}
         >
-          {couple.groom} &amp; {couple.bride}
+          {firstEn} &amp; {secondEn}
         </p>
       </div>
     </div>

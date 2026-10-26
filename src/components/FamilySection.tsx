@@ -15,7 +15,7 @@ export const FamilySection = memo(function FamilySection() {
           style={body}
         />
         <RiseText
-          text="અમારા પરિવારના *ચિ.* *કિશન* સંગ *અ.* *સૌ.* *રિયા* તથા *ચિ.* *પાર્થ* સંગ *અ.* *સૌ.* *હિના* ના શુભ લગ્ન નિર્ધાર્યા છે."
+          text="અમારા પરિવારના *ચિ.* *કિશન* સંગ *ચિ.* *રિયા* તથા *ચિ.* *હિના* સંગ *ચિ.* *પાર્થ* ના શુભ લગ્ન નિર્ધાર્યા છે."
           className="mt-4 font-gu text-cocoa/90 text-gu"
           step={45}
           style={body}
@@ -29,7 +29,7 @@ export const FamilySection = memo(function FamilySection() {
 
         <Rise className="mt-10">
           <p className="font-gu text-cocoa/70 text-base">લિ.</p>
-          <p className="gold-text font-gu font-bold text-3xl mt-1">સમગ્ર પરિવાર</p>
+          <p className="gold-text font-gu font-bold text-3xl mt-1">સમગ્ર ઊંઝિયા પરિવાર</p>
         </Rise>
       </div>
     </section>

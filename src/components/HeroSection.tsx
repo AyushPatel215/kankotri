@@ -37,7 +37,8 @@ export const HeroSection = memo(function HeroSection({
           when={started}
           delay={400}
           text="શ્રી ગણેશાય નમઃ"
-          className="mt-3 font-gu font-semibold text-bronze text-lg"
+          className="mt-4 font-gu font-bold text-bronze leading-tight"
+          style={{ fontSize: 'clamp(1.8rem, 8.5vw, 2.6rem)' }}
         />
 
         <RiseText
@@ -59,27 +60,21 @@ export const HeroSection = memo(function HeroSection({
           <Rise when={started} delay={1400} className="flex items-center gap-3 py-1">
             Kishan <Heart size={20} /> Riya
           </Rise>
-          <Rise when={started} delay={1600} className="font-serif italic text-bronze text-2xl my-1">
+          <Rise when={started} delay={1550} className="mt-1 flex flex-col items-center leading-snug">
+            <span className="font-gu font-bold text-bronze text-xl">ગુરુવાર, ૨૬ નવેમ્બર ૨૦૨૬</span>
+            <span className="font-serif italic text-cocoa/80 text-base">Thursday, 26 November 2026</span>
+          </Rise>
+          <Rise when={started} delay={1700} className="font-serif italic text-bronze text-2xl my-3">
             &amp;
           </Rise>
-          <Rise when={started} delay={1800} className="flex items-center gap-3 py-1">
-            Hina <Heart size={20} /> Parth
+          <Rise when={started} delay={1850} className="flex items-center gap-3 py-1">
+            Heena <Heart size={20} /> Parth
+          </Rise>
+          <Rise when={started} delay={2000} className="mt-1 flex flex-col items-center leading-snug">
+            <span className="font-gu font-bold text-bronze text-xl">શનિવાર, ૨૮ નવેમ્બર ૨૦૨૬</span>
+            <span className="font-serif italic text-cocoa/80 text-base">Saturday, 28 November 2026</span>
           </Rise>
         </div>
-
-        <RiseText
-          when={started}
-          delay={2100}
-          text="ગુરુવાર, ૨૫ નવેમ્બર ૨૦૨૬"
-          className="mt-8 font-gu font-bold text-bronze text-xl"
-        />
-        <RiseText
-          when={started}
-          delay={2300}
-          step={80}
-          text="Thrusday, 25 November 2026 at 08:00 AM"
-          className="font-serif italic text-cocoa/80 text-lg"
-        />
 
         <Rise when={started} delay={2600} className="mt-9 w-full">
           <p className="font-gu text-cocoa/85 text-base mb-4">લગ્નોત્સવની શરૂઆતને બાકી</p>
