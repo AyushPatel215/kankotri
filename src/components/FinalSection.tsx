@@ -28,9 +28,9 @@ export const FinalSection = memo(function FinalSection() {
 
           <Rise className="mt-10 glass rounded-3xl px-6 py-8">
             <CalendarHeart className="mx-auto w-7 h-7 text-bronze" strokeWidth={1.5} aria-hidden="true" />
-            <p className="mt-3 font-gu text-cocoa/75 text-base">હસ્ત મેળાપ</p>
+            <p className="mt-3 font-gu text-cocoa/75 text-base">ભોજન સમારંભ</p>
             <p className="gold-text font-gu font-bold text-[1.7rem] leading-tight mt-1">શનિવાર, ૨૮ નવેમ્બર ૨૦૨૬</p>
-            <p className="font-gu font-semibold text-cocoa text-lg mt-1">સવારે ૯:૩૦ કલાકે</p>
+            <p className="font-gu font-semibold text-cocoa text-lg mt-1">સવારે 10:30 કલાકે</p>
 
             <Ornament className="mx-auto my-6" />
 
